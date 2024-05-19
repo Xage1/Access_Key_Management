@@ -6,7 +6,6 @@ export const User = mongoose.model('User', {
     role: { type: String, required: true, enum: ['admin', 'personnel'], default: 'personnel' },
     status: { type: String, required: true, default: 'inactive' },
     activation_token: { type: String, required: true },
-    reset_OTP: { type: String },
     key: [{
         type: mongoose.Schema.ObjectId,
         ref: 'Key'
