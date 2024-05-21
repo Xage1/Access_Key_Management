@@ -5,7 +5,7 @@ import mongoose from 'mongoose'
 const app = express()
 dotenv.config()
 
-const port = process.env.PORT || 3000
+const port = parseInt(process.env.PORT,10) || 3000
 
 // set up database connection
 mongoose.connect(process.env.DATABASE_URL);
