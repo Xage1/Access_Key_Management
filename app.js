@@ -7,8 +7,9 @@ dotenv.config()
 
 const port = parseInt(process.env.PORT,10) || 3000
 
-// set up database connectio)n
+// set up database connection
 mongoose.connect(process.env.DATABASE_URL);
+
 
 var set = mongoose.connection;
 set.on('error', console.error.bind(console, 'connection error:'));
