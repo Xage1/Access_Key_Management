@@ -1,4 +1,4 @@
-import Admin from '../model/Admin'; // Adjust the path as necessary
+import Admin from '../model/Admin'; 
 
 async function getNextAdminCode() {
   const lastAdmin = await Admin.findOne().sort('-adminCode').exec();
