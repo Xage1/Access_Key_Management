@@ -5,11 +5,10 @@ import mongoose from 'mongoose'
 const app = express()
 dotenv.config()
 
-const port = process.env.PORT || 3000
+const port = parseInt(process.env.PORT, 10) || 3000;
 
 // set up database connection
 mongoose.connect(process.env.DATABASE_URL);
-
 
 var set = mongoose.connection;
 set.on('error', console.error.bind(console, 'connection error:'));
@@ -23,4 +22,4 @@ app.use(express.urlencoded({ extended: true}))
 
 app.listen(port, () => {
     console.log(`Server is listening on port ${port}`)
-})
+});
