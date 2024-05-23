@@ -8,7 +8,7 @@ export const User = mongoose.model('User', {
     activation_token: { type: String, required: true },
     key: [{
         type: mongoose.Schema.ObjectId,
-        ref: 'Key'
+        ref: 'AccessKey'
     }],
     otp: [{
         type: mongoose.Schema.ObjectId,
