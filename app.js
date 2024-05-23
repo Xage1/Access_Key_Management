@@ -1,6 +1,7 @@
 import express from 'express'
 import dotenv from 'dotenv'
 import mongoose from 'mongoose'
+import { accountRouter } from './routes/accountRoutes.js'
 
 const app = express()
 dotenv.config()
@@ -20,6 +21,8 @@ set.once('open', function() {
 // setting up middleware to parse body data
 app.use(express.json())
 app.use(express.urlencoded({ extended: true}))
+
+app.use('/api/v1', accountRouter)
 
 app.listen(port, () => {
     console.log(`Server is listening on port ${port}`)
