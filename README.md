@@ -8,4 +8,26 @@ Still primarily in beta stage of development but soon to get better
 3. Oladimeji Olanyika
 4. John Waweru
 
-## TASKS
+## GETTING STARTED
+1. Clone the project
+ 
+   ```
+   git clone https://github.com/Xage1/Access_Key_Management.git
+   ```
+2. Change to project directory
+
+    ```
+    cd Access_Key_Management/
+    ```
+3. Set up enviroment variables in env file
+   
+4. Install packages used in project
+
+   ```
+   npm install
+   ```
+5. Start server
+
+    ```
+    nodemon app.js
+    ```
