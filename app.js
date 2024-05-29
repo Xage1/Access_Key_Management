@@ -2,6 +2,7 @@ import express from 'express'
 import dotenv from 'dotenv'
 import mongoose from 'mongoose'
 import { accountRouter } from './routes/accountRoutes.js'
+import { KeyRouter } from './routes/keyRoutes.js'
 
 const app = express()
 dotenv.config()
@@ -23,6 +24,7 @@ app.use(express.json())
 app.use(express.urlencoded({ extended: true}))
 
 app.use('/api/v1', accountRouter)
+app.use('/api/v1', KeyRouter)
 
 app.listen(port, () => {
     console.log(`Server is listening on port ${port}`)
