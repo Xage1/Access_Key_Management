@@ -7,4 +7,4 @@ const accessKeySchema = new mongoose.Schema({
     status: { type: String, enum: ['active', 'expired', 'revoked'], default: 'active' }
 });
 
-module.exports = mongoose.model('AccessKey', accessKeySchema);
+export const Key = mongoose.model('AccessKey', accessKeySchema);
