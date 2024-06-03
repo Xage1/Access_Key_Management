@@ -1,3 +1,5 @@
+import jwt from 'jsonwebtoken'
+
 // verify user using token
 export const verifyToken = (req, res, next) => {
     //Retrieves token from request header
