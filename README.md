@@ -1,11 +1,12 @@
-Here is the first Step in the creation of an application for generating Access Keys for specified Website.
-Still primarily in beta stage of development but soon to get better
+# Access Key Manager
+This project allows an organisation securely manage access keys by providing a centralized access key manager, it provides functionalities for both personnels and admins.
+This allows a more secured system as it reduces loss or comprise of access and allows admins to have a complete oversight of user activities and permission levels
 
 ## TEAM MEMBERS
 
 1. Eugene Atinbire
 2. Kenneth Kiarie
-3. Oladimeji Olanyika
+3. Oladimeji Olayinka
 4. John Waweru
 
 ## GETTING STARTED
