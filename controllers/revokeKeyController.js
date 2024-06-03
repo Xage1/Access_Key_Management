@@ -3,7 +3,10 @@ import { User } from "../model/User.js"
 
 export const revokeKey = async (req, res) => {
     // check to see if user exists
-    const user = await User.findOne({ email: req.user.email }).catch((err => catchErr(res, 500)))
+    const user = await User.findOne({ email: req.user.email }).catch((err => res.status(500).json({
+        message: "Failed",
+        message: "Internal server error"
+    })))
     if (!user) return res.status(404).json({
         status: "Failed",
         message: "This user doesn\'t exist"
@@ -22,10 +25,11 @@ export const revokeKey = async (req, res) => {
     })
 
     // check if access key exists and update it's status to revoked
-    const accessKey = await Key.findOne({ accessKey: req.query.access_key }).catch((err => res.status(500).json({
+    const accessKey = await Key.findOne({ access_key: req.query.access_key }).catch((err => res.status(500).json({
         message: "Failed",
         message: "Internal server error"
     })))
+    console.log(accessKey)
     if (!accessKey) return res.status(404).json({
         status: "Failed",
         message: "Access key does not exist"

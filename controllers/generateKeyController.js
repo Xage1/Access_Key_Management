@@ -1,5 +1,6 @@
 import crypto from 'crypto'
 import { User } from '../model/User.js'
+import { Key } from '../model/AccessKey.js'
 
 export const generateKey = async (req, res) => {
     // generate a 16 character access key

@@ -2,7 +2,7 @@ import express from 'express'
 import { revokeKey } from '../controllers/revokeKeyController.js'
 import { generateKey } from '../controllers/generateKeyController.js'
 import { verifyToken } from '../middleware/verifyToken.js'
-import { allKeys } from '../controllers/FetchKeysController.js'
+import { allKeys } from '../controllers/fetchKeysController.js'
 
 export const KeyRouter = express.Router()
 

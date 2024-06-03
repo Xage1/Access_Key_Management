@@ -1,5 +1,6 @@
 import bcrypt from 'bcrypt'
 import { User } from "../model/User.js"
+import {createToken} from '../middleware/createToken.js'
 
 export const login = async (req, res) => {
     const { email, password } = req.body
@@ -38,5 +39,5 @@ export const login = async (req, res) => {
         message: "Incorrect email or password"
     })
  
-    //createToken(user, res, 200)
+    createToken(user, res, 200)
 }
